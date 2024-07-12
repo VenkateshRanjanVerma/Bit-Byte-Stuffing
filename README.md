@@ -8,3 +8,14 @@
 6. For de-stuffing, copy the transmitted data to another array after detecting the stuffed bits.
 7. Display the received bit stream.
 8. Stop
+
+
+
+## Algorithm for Byte Stuffing
+
+1. Start
+2. Append `DLE STX` at the beginning of the string
+3. Check the data for the `DLE` character; if `DLE` is present in the string (e.g., `JKODLE`), insert another `DLE` in the string (e.g., `JKODLEDLE`)
+4. Transmit `DLE ETX` at the end of the string
+5. Display the string
+6. Stop
